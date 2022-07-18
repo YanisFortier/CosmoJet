@@ -7,6 +7,7 @@ import android.view.*
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
 import androidx.core.view.children
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -41,12 +42,17 @@ class FirstFragment : Fragment() {
 
 		activerAjoutParticipant()
 		activerChoixCategories()
+
+		binding.boutonDemarrer.setOnClickListener {
+			Toast.makeText(this.requireContext(), "Prout", Toast.LENGTH_LONG).show()
+		}
 	}
 
 	private fun activerChoixCategories() {
 		chipGroupCategories.setOnCheckedChangeListener { _, _ ->
 			verifierSiEvenementValide()
 			binding.layoutParticipants.visibility = VISIBLE
+			binding.logo.layoutParams.height = 150
 		}
 	}
 

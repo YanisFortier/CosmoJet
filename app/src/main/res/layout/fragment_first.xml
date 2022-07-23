@@ -7,7 +7,7 @@
     android:fillViewport="true"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    tools:context=".FirstFragment">
+    tools:context=".ConfigurationPartie">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

@@ -4,20 +4,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment">
+    tools:context=".SelectionJeux"
+
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp">
 
-        <Button
-            android:id="@+id/button_second"
-            android:layout_width="wrap_content"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardViewCarousel"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/previous"
+            app:cardCornerRadius="50dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="1dp"
+            app:strokeColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                android:id="@+id/carousel"
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                app:showNavigationButtons="false" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            app:cardCornerRadius="50dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="1dp"
+            app:strokeColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardViewCarousel">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardViewCarousel">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_goto_previous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="0dp"
+                    app:cornerRadius="100dp"
+                    app:backgroundTint="@color/flat_grey_dark_2"
+
+                    app:icon="@drawable/ic_arrow_back"
+                    app:iconPadding="0dp"
+                    app:iconTint="@color/white" />
+
+
+                <com.google.android.material.button.MaterialButton
+
+                    android:id="@+id/boutonDemarrer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🥳 Démarrer 🎉"
+                    android:layout_marginHorizontal="15dp"/>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_goto_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="0dp"
+                    app:backgroundTint="@color/flat_grey_dark_2"
+                    app:icon="@drawable/ic_arrow_forward"
+                    app:iconPadding="0dp"
+                    app:iconTint="@color/white" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </com.google.android.material.card.MaterialCardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.core.widget.NestedScrollView>

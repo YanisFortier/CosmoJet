@@ -17,7 +17,7 @@ import com.google.android.material.textfield.TextInputEditText
 import com.yfortier.cosmojet.databinding.FragmentFirstBinding
 
 
-class FirstFragment : Fragment() {
+class ConfigurationPartie : Fragment() {
 	private var _binding: FragmentFirstBinding? = null
 	private val binding get() = _binding!!
 
